@@ -15,6 +15,15 @@
         <Projects Include="lab4\lab4.cbproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="lab5\lab5.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="lab6\inputable\lab6inputable.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="lab6\readable\lab6readable.cbproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -59,14 +68,41 @@
     <Target Name="lab4:Make">
         <MSBuild Projects="lab4\lab4.cbproj" Targets="Make"/>
     </Target>
+    <Target Name="lab5">
+        <MSBuild Projects="lab5\lab5.cbproj"/>
+    </Target>
+    <Target Name="lab5:Clean">
+        <MSBuild Projects="lab5\lab5.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="lab5:Make">
+        <MSBuild Projects="lab5\lab5.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="lab6inputable">
+        <MSBuild Projects="lab6\inputable\lab6inputable.cbproj"/>
+    </Target>
+    <Target Name="lab6inputable:Clean">
+        <MSBuild Projects="lab6\inputable\lab6inputable.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="lab6inputable:Make">
+        <MSBuild Projects="lab6\inputable\lab6inputable.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="lab6readable">
+        <MSBuild Projects="lab6\readable\lab6readable.cbproj"/>
+    </Target>
+    <Target Name="lab6readable:Clean">
+        <MSBuild Projects="lab6\readable\lab6readable.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="lab6readable:Make">
+        <MSBuild Projects="lab6\readable\lab6readable.cbproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="lab1var2;lab7var2;lab3;lab4"/>
+        <CallTarget Targets="lab1var2;lab7var2;lab3;lab4;lab5;lab6inputable;lab6readable"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="lab1var2:Clean;lab7var2:Clean;lab3:Clean;lab4:Clean"/>
+        <CallTarget Targets="lab1var2:Clean;lab7var2:Clean;lab3:Clean;lab4:Clean;lab5:Clean;lab6inputable:Clean;lab6readable:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="lab1var2:Make;lab7var2:Make;lab3:Make;lab4:Make"/>
+        <CallTarget Targets="lab1var2:Make;lab7var2:Make;lab3:Make;lab4:Make;lab5:Make;lab6inputable:Make;lab6readable:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
