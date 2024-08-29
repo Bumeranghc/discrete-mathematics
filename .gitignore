@@ -1,0 +1,10 @@
+**/Win32/Debug
+**/Win32/Release
+**/Win64/Debug
+**/Win64x/Debug
+**/Win64/Release
+**/Win64x/Release
+**/__recovery
+**/__history
+**/*.cbproj.local
+**/*.groupproj.local
